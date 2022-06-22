@@ -1,0 +1,17 @@
+﻿@page
+@model Home1.Pages.ProductsModel
+@{
+}
+@using Models
+
+<h2>Список товаров</h2>
+<table class="table">
+    <tr><td>Name</td><td>Age</td></tr>
+    @foreach (Product product in Model.product)
+    {
+        <tr>
+            <td><a href="/@product.Name">@product.Name</a></td>
+            <td>@product.Price</td>
+        </tr>
+    }
+</table>
